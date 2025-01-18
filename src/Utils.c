@@ -40,7 +40,7 @@ int custom_snprintf(char* buffer, size_t size, const char* format, ...) {
     va_start(args, format);
     int length = 0;
 
-    while (*format && length < size - 1) {
+    while (*format && length < (int)size - 1) {
         if (*format == '%' && *(format + 1)) {
             format++;
             switch (*format) {

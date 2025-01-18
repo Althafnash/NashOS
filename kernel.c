@@ -3,6 +3,9 @@
 #include "RCT.h"
 #include "Keyboard.h"
 #include "Utils.h"
+#include "ISR.h"
+#include "PIC.h"
+#include "IDT.h"
 #include <stddef.h>
 #include <stdbool.h>
 
@@ -55,6 +58,9 @@ void process_command(const char* command) {
 
 
 void kernel_main(void) {
+    pic_init();
+    idt_init();
+    isr_init();
     terminal_initialize();
     terminal_writestring("$NASHOS$- : ");
     while (true) {
