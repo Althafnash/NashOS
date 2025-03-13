@@ -37,6 +37,13 @@ void welcome() {
     terminal_writestring("-_- -_-");
     terminal_writestring("\n");
     terminal_writestring("\n");
+    terminal_writestring("COMMANDS\n");
+    terminal_writestring("help - Display this help message\n");
+    terminal_writestring("cls - Clear the screen\n");
+    terminal_writestring("echo <string> - Print the string\n");
+    terminal_writestring("date - Display the current date and time\n");
+    terminal_writestring("shutdown - Shutdown the system\n");
+    terminal_writestring("\n");
 }
 
 void process_command(const char* command) {
